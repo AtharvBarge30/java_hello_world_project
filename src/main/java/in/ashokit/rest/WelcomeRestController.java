@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@RestController("/api")
 public class WelcomeRestController {
 
 	private Logger logger = LoggerFactory.getLogger(WelcomeRestController.class);
@@ -15,10 +15,10 @@ public class WelcomeRestController {
 		logger.info("***** WelcomeRestController::Constructor *****");
 	}
 
-	@GetMapping
+	@GetMapping("/getMsg")
 	public String welcomeMsg() {
 		logger.info("***** welcomeMsg() execution start *****");
-		String msg = "Welcome to Ashok IT - Software Training Institute (HYD) ..!!";
+		String msg = "Welcome to Neutrino  This is me Atharv";
 		logger.info("***** welcomeMsg() execution end *****");
 		return msg;
 	}
